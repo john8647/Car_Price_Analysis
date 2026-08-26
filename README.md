@@ -1,75 +1,40 @@
-# ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# ![Project banner](resources/banner.png)
 
-## Template Instructions
+## Car Price Analysis
 
-Welcome,
+The project aims to analyse the car market in the US to provide evidence for a business using a public dataset. Specifically for a Chinese car company called Geely Auto which aims to enter the U.S. market. They which to make an evidence-based series of decision to help the compete against European competition and directly with American brands. Their aim is to use measurable factors from sales data to identify the significant variables like engine size, horsepower, brand reputation, safety features, fuel efficiency, vehicle type, and additional technological advances to evaluate how it affects the price. The objective is to see if those factors differ in the US to China. The dataset will give us the which factors affect the car price in the US market. From the data we want to know which car features move in a predictable way with price and which ones do not.
+With these results Geely can suggest strategic decision about product design and features which will help set an appropriate point that will drive price. They will then look at the price point information — they’ll use it to shape their entire U.S. market strategy as pricing data is one of the most powerful levers when entering a mature, competitive market like the U.S. Geely then position themselves against competitors with precision to avoid assumptions and make decisions based on real American market behaviour.
 
-This is the Code Institute student template for the three Data Analytics capstone projects. We have preinstalled all of the tools you need to get started. It's perfectly okay to use this template as the basis for your project submissions. Click the `Use this template` button above to get started.
+Data set content.
+For this project the data source Kaggle and there are just 205 cars. The dataset tells us details about the car, from its size, engine specification, fuel, power, aspiration (turbo) efficiency and price. Limitations is we’re not told where in the US its sold, nor by who. We can assume they’re all new cars without mileage and randomly sourced from various states around the US. This potentially limits the reliability of the conclusions for example location bias due to climate or state wealth.
 
-You can safely delete the Template Instructions section of this README.md file and modify the remaining paragraphs for your own project. Please do read the Template Instructions at least once, though! It contains some important information about the IDE and the extensions we use.
+Business requirements and goals
+They want to finds positive coefficients in any of the data they’ve obtained to tell them which features of cars American buyers are willing to pay more for. So, aim is to identify which features are worth investing in for their export market and to design vehicles that match American preferences to boost sales.
+User Stories
+CEO of Geely Auto, wants to know the main price drivers to align price of vehicle line to compete with European rivals.
+Marketing manager, wants to know which features to advertise and which ones to avoid, he might be coming from a background where those features differ.
+Production manager, he wants to see cost effective it would be to make adjustments to cars and remain cost-effective
+Data Analysts, using the result of the lowest Root Mean Squared Error wants to work with those factors in a model that best predicts the price so he can hit an accurate estimation what it should be.
 
-If you are working on the first capstone project, you can also delete `.python-version`, `.slugignore`, `Procfile` and `setup.sh` as they are only required for later dashboard projects. 
+What you are looking for. Questions. Which answer is using Analytics to support Making an evidence based business decision
+Hypotheses: what do I think will happen why? How? What are the targets?
 
-## How to use this repo
+Project Plan. What is the plan to reach the business requirements and answer the questions?
+Obtain data, look at structure and initial exploratory checks.
+Data Cleaning Process. We will get an overview so we understand the fields.
+• Check for duplicates, identify and remove duplicate rows. (context aware)
+• Handle Missing data. (strategy to resolve and options)
+• Detect and Manage Outliers
+• Handling data anomalies.
+Data processing. Looking at categorical columns, scaling back and splitting data.
+Initial Visualization. Initial plots, comparing price with features, looking for correlation trends.
+Interpretation and further focus area of interest.
+Chosen Analysis technique and libraries will be a Model selection (Linear Regression), library setup (Pandas, Scikit-Learn).
+Analysis through interpretation and prediction Training the regression model, calculating RMSE and R²
 
-1. Use this template to create your GitHub project repo. Click the **Use this template** button, then click **Create a new repository**.
+Future consideration. Translating the finding to a marketing strategy to identify the scope and domain.
 
-1. Copy the URL of your repository to your clipboard.
+Credits
 
-1. In VS Code, select **File** -> **Open Folder**.
-
-1. Select your `vscode-projects` folder, then click the **Select Folder** button on Windows, or the **Open** button on Mac.
-
-1. From the top menu in VS Code, select **Terminal** > **New Terminal** to open a new terminal.
-
-1. In the terminal, type `git clone` followed by the URL of your GitHub repository. Then hit **Enter**. This command will download all the files in your GitHub repository into your vscode-projects folder.
-
-1. In VS Code, select **File** > **Open Folder** again.
-
-1. This time, navigate to and select the folder for the project you just downloaded. Then, click **Select Folder**.
-
-1. A virtual environment is necessary when working with Python projects to ensure each project's dependencies are kept separate. You need to create your virtual environment, also called a venv, and then activate it whenever you return to your workspace.
-Click the gear icon in the lower left-hand corner of the screen to open the Manage menu and select **Command Palette** to open the VS Code command palette.
-
-1. In the command palette, type: *create environment* and select **Python: Create Environment…**
-
-1. Choose **Venv** from the dropdown list.
-
-1. Choose the Python version you installed earlier. Currently, we recommend Python 3.12.8
-
-1. **DO NOT** click the box next to `requirements.txt`; you need to complete additional steps before installing your dependencies. Click **OK**.
-
-1. You will see a `.venv` folder appear in the file explorer pane, indicating that the virtual environment has been created.
-
-1. **Important**: Note that the `.venv` folder is in the `.gitignore` file so that Git won't track it.
-
-1. Return to the terminal by clicking on the TERMINAL tab, or click on the **Terminal** menu and choose **New Terminal** if no terminal is currently open.
-
-1. In the terminal, use the command below to install your dependencies. This may take several minutes.
-
- ```console
- pip3 install -r requirements.txt
- ```
-
-1. Open the `jupyter_notebooks` directory, and click on the notebook you want to open.
-
-1. Click the **Kernel** button, then choose **Python Environments**.
-
-Note that the kernel says `Python 3.12.8` as it inherits from the venv, so it will be Python-3.12.8 if that is what is installed on your PC. To confirm this, you can use the command below in a notebook code cell.
-
-```console
-! python --version
-```
-
-## Deployment Reminders
-
-* The `.python-version`, `.slugignore`, `Procfile` and `setup.sh` files are necessary only if you are deploying a Streamlit app to Heroku as part of your submission for units 2 and 3. 
-* Set the `.python-version` Python version to a [Heroku-22](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack, currently supported version that most closely matches what you used in this project.
-* The project can be deployed to Heroku using the following steps.
-
-1. Log in to Heroku and create an App
-2. At the **Deploy** tab, select **GitHub** as the deployment method.
-3. Select your repository name and click **Search**. Once it is found, click **Connect**.
-4. Select the branch you want to deploy, then click **Deploy Branch**.
-5. The deployment process should happen smoothly if all deployment files are fully functional. Click the button **Open App** at the top of the page to access your App.
-6. If the slug size is too large, then add large files not required for the app to the `.slugignore` file.
+Content taken from
+Acknowledgements
