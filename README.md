@@ -99,9 +99,13 @@ This mathematical outcome gives every leadership department a clear path forward
 
 - To the Marketing Manager. You now have precise data positioning for customer campaigns. Marketing messaging can highlight space efficiency (Car Volume) alongside performance tiers (Horsepower) to justify price points directly to consumers.
 
-- To the Production ManagerManufacturing resources can be optimized around these three key constraints. Knowing that curb weight is simply a function of volume and engine size, engineering can focus on lightweight materials without sacrificing the physical volume consumers expect for higher prices.
+- To the Production Manager. Manufacturing resources can be optimized around these three key constraints. Knowing that curb weight is simply a function of volume and engine size, engineering can focus on lightweight materials without sacrificing the physical volume consumers expect for higher prices.
 
-- To the Data AnalystYour dataset is officially prepped! With outliers removed and the non-redundant feature set ($X = \{\text{enginesize}, \text{horsepower}, \text{car\_volume}\}$) defined, you are ready to train, validate, and fine-tune your regression models in scikit-learn.
+- To the Data AnalystYour dataset is officially prepared with key feature set ($X = \{\text{enginesize}, \text{horsepower}, \text{car\_volume}\}$) defined, you are ready to train, validate, and fine-tune your regression models in scikit-learn.
+
+## Final thoughts
+
+This project was a great hands-on learning experience. My biggest takeaway was identifying how Linear Regression behaves when controlling for noise—specifically, seeing that a strong linear relationship persisted even after stripping away offsetting factors. It really reinforced my understanding of feature selection and data normalization using Pandas, NumPy, Seaborn, Matplotlib and Plotly. Would liked longer to develope Machine Learning feature on the Regression patterns found.
 
 ## Content taken from
 
@@ -112,3 +116,11 @@ Reused code from LMS from https://lms.codeinstitute.net/
 
 Some idea use from project. https://www.kaggle.com/code/zabihullah18/car-price-prediction
 General planning structure use from https://github.com/JayneLawley/Project-1-Healthcare-Insurance-Cost
+
+## Thanks to
+
+Maria Oana and Seun Joy for encourging support
+
+## Unfixed bugs
+
+The 3D ploty map toggle buttons don't show up properly. Unable to figure out how.
