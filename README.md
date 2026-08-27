@@ -85,10 +85,30 @@ Future consideration. Translating the finding to a marketing strategy to identif
 
 ### Data Visualisations
 
+# ![heatmap](resources/heatmap.png)
+
 ## Conclusion
 
-## Credits
+By filtering out extreme market noise—such as budget outliers and ultra-luxury brands—we eliminated multicollinearity (duplicate data) and isolated the variables that directly dictate market value.
+
+Engine Size ($r = 0.76$): Directly measures internal engine capacity (displacement). Larger engines cost more to produce and command higher prices. Horsepower ($r = 0.76$): Measures overall power output and performance. Higher horsepower is the strongest performance indicator of vehicle price.Car Volume ($r = 0.64$): Our custom engineered feature ($V = \text{length} \times \text{width} \times \text{height}$) captures the total 3D physical size of the vehicle without the redundancy of curb weight.Stakeholder Action Items.
+
+This mathematical outcome gives every leadership department a clear path forward:
+
+- To the CEO: We now have a simplified, high-confidence model of what creates vehicle value. Instead of tracking dozens of confusing metrics, our business strategy can focus on balancing Physical Size, Engine Displacement, and Power Output to maximize profit margins in target markets.
+
+- To the Marketing Manager. You now have precise data positioning for customer campaigns. Marketing messaging can highlight space efficiency (Car Volume) alongside performance tiers (Horsepower) to justify price points directly to consumers.
+
+- To the Production ManagerManufacturing resources can be optimized around these three key constraints. Knowing that curb weight is simply a function of volume and engine size, engineering can focus on lightweight materials without sacrificing the physical volume consumers expect for higher prices.
+
+- To the Data AnalystYour dataset is officially prepped! With outliers removed and the non-redundant feature set ($X = \{\text{enginesize}, \text{horsepower}, \text{car\_volume}\}$) defined, you are ready to train, validate, and fine-tune your regression models in scikit-learn.
 
 ## Content taken from
 
+Help with rewriting theory and planning statements with https://gemini.google.com/ .
+Reused code from LMS from https://lms.codeinstitute.net/
+
 ## Acknowledgements
+
+Some idea use from project. https://www.kaggle.com/code/zabihullah18/car-price-prediction
+General planning structure use from https://github.com/JayneLawley/Project-1-Healthcare-Insurance-Cost
